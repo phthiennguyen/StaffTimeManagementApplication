@@ -1,0 +1,427 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D99DE95-D826-4485-AA22-8D8E62FF589F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StaffTimeManagement</RootNamespace>
+    <AssemblyName>StaffTimeManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44317</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GUI\Admin_Form\AdminForm.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionAddAdminForm.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionAddAdminUserForm.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionAddManagerForm.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionAddManagerUserForm.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionAddStaffForm.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionAddStaffUserForm.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionChangePasswordAdmin.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionChangePasswordManager.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionChangePasswordStaff.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionForm.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionModifyAdminInfo.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionModifyManagerInfo.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionModifyStaffInfo.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionSelectUserAdmin.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionSelectUserManager.aspx" />
+    <Content Include="GUI\Admin_Form\AdminFunctionSelectUserStaff.aspx" />
+    <Content Include="GUI\Admin_Form\AdminProfileForm.aspx" />
+    <Content Include="GUI\Admin_Form\AdminProfileModifyAdminInfo.aspx" />
+    <Content Include="GUI\Admin_Form\CSS\Home.css" />
+    <Content Include="GUI\Admin_Form\CSS\power.png" />
+    <Content Include="GUI\Admin_Form\CSS\Profile.css" />
+    <Content Include="GUI\CSS\Login.css" />
+    <Content Include="GUI\LoginForm.aspx" />
+    <Content Include="GUI\Manager_Form\CSS\Home.css" />
+    <Content Include="GUI\Manager_Form\CSS\Profile.css" />
+    <Content Include="GUI\Manager_Form\ManagerForm.aspx" />
+    <Content Include="GUI\Manager_Form\ManagerFunctionAddStaffForm.aspx" />
+    <Content Include="GUI\Manager_Form\ManagerFunctionAddStaffUserForm.aspx" />
+    <Content Include="GUI\Manager_Form\ManagerFunctionAddStaffWorkHour.aspx" />
+    <Content Include="GUI\Manager_Form\ManagerFunctionChangePasswordStaff.aspx" />
+    <Content Include="GUI\Manager_Form\ManagerFunctionModifyStaffInfo.aspx" />
+    <Content Include="GUI\Manager_Form\ManagerFunctionModifyStaffWorkHour.aspx" />
+    <Content Include="GUI\Manager_Form\ManagerFunctionSelectStaffWorkHour.aspx" />
+    <Content Include="GUI\Manager_Form\ManagerFunctionSelectUserStaff.aspx" />
+    <Content Include="GUI\Manager_Form\ManagerFunctionUserForm.aspx" />
+    <Content Include="GUI\Manager_Form\ManagerProfileForm.aspx" />
+    <Content Include="GUI\Manager_Form\ManagerProfileModifyManagerInfo.aspx" />
+    <Content Include="GUI\Staff_Form\CSS\Home.css" />
+    <Content Include="GUI\Staff_Form\CSS\Profile.css" />
+    <Content Include="GUI\Staff_Form\StaffForm.aspx" />
+    <Content Include="GUI\Staff_Form\StaffProfileForm.aspx" />
+    <Content Include="GUI\Staff_Form\StaffProfileModifyStaffInfo.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAL\Admin.cs" />
+    <Compile Include="BAL\Manager.cs" />
+    <Compile Include="BAL\Staff.cs" />
+    <Compile Include="BAL\StaffWorkHour.cs" />
+    <Compile Include="BAL\User_Admin.cs" />
+    <Compile Include="BAL\User_Manager.cs" />
+    <Compile Include="BAL\User_Staff.cs" />
+    <Compile Include="DAL\AdminDB.cs" />
+    <Compile Include="DAL\ManagerDB.cs" />
+    <Compile Include="DAL\StaffDB.cs" />
+    <Compile Include="DAL\StaffWorkHourDB.cs" />
+    <Compile Include="DAL\User_AdminDB.cs" />
+    <Compile Include="DAL\User_ManagerDB.cs" />
+    <Compile Include="DAL\User_StaffDB.cs" />
+    <Compile Include="DAL\UtilityDB.cs" />
+    <Compile Include="GUI\Admin_Form\AdminForm.aspx.cs">
+      <DependentUpon>AdminForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminForm.aspx.designer.cs">
+      <DependentUpon>AdminForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddAdminForm.aspx.cs">
+      <DependentUpon>AdminFunctionAddAdminForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddAdminForm.aspx.designer.cs">
+      <DependentUpon>AdminFunctionAddAdminForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddAdminUserForm.aspx.cs">
+      <DependentUpon>AdminFunctionAddAdminUserForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddAdminUserForm.aspx.designer.cs">
+      <DependentUpon>AdminFunctionAddAdminUserForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddManagerForm.aspx.cs">
+      <DependentUpon>AdminFunctionAddManagerForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddManagerForm.aspx.designer.cs">
+      <DependentUpon>AdminFunctionAddManagerForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddManagerUserForm.aspx.cs">
+      <DependentUpon>AdminFunctionAddManagerUserForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddManagerUserForm.aspx.designer.cs">
+      <DependentUpon>AdminFunctionAddManagerUserForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddStaffForm.aspx.cs">
+      <DependentUpon>AdminFunctionAddStaffForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddStaffForm.aspx.designer.cs">
+      <DependentUpon>AdminFunctionAddStaffForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddStaffUserForm.aspx.cs">
+      <DependentUpon>AdminFunctionAddStaffUserForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionAddStaffUserForm.aspx.designer.cs">
+      <DependentUpon>AdminFunctionAddStaffUserForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionChangePasswordAdmin.aspx.cs">
+      <DependentUpon>AdminFunctionChangePasswordAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionChangePasswordAdmin.aspx.designer.cs">
+      <DependentUpon>AdminFunctionChangePasswordAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionChangePasswordManager.aspx.cs">
+      <DependentUpon>AdminFunctionChangePasswordManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionChangePasswordManager.aspx.designer.cs">
+      <DependentUpon>AdminFunctionChangePasswordManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionChangePasswordStaff.aspx.cs">
+      <DependentUpon>AdminFunctionChangePasswordStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionChangePasswordStaff.aspx.designer.cs">
+      <DependentUpon>AdminFunctionChangePasswordStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionForm.aspx.cs">
+      <DependentUpon>AdminFunctionForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionForm.aspx.designer.cs">
+      <DependentUpon>AdminFunctionForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionModifyAdminInfo.aspx.cs">
+      <DependentUpon>AdminFunctionModifyAdminInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionModifyAdminInfo.aspx.designer.cs">
+      <DependentUpon>AdminFunctionModifyAdminInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionModifyManagerInfo.aspx.cs">
+      <DependentUpon>AdminFunctionModifyManagerInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionModifyManagerInfo.aspx.designer.cs">
+      <DependentUpon>AdminFunctionModifyManagerInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionModifyStaffInfo.aspx.cs">
+      <DependentUpon>AdminFunctionModifyStaffInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionModifyStaffInfo.aspx.designer.cs">
+      <DependentUpon>AdminFunctionModifyStaffInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionSelectUserAdmin.aspx.cs">
+      <DependentUpon>AdminFunctionSelectUserAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionSelectUserAdmin.aspx.designer.cs">
+      <DependentUpon>AdminFunctionSelectUserAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionSelectUserManager.aspx.cs">
+      <DependentUpon>AdminFunctionSelectUserManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionSelectUserManager.aspx.designer.cs">
+      <DependentUpon>AdminFunctionSelectUserManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionSelectUserStaff.aspx.cs">
+      <DependentUpon>AdminFunctionSelectUserStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminFunctionSelectUserStaff.aspx.designer.cs">
+      <DependentUpon>AdminFunctionSelectUserStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminProfileForm.aspx.cs">
+      <DependentUpon>AdminProfileForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminProfileForm.aspx.designer.cs">
+      <DependentUpon>AdminProfileForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminProfileModifyAdminInfo.aspx.cs">
+      <DependentUpon>AdminProfileModifyAdminInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_Form\AdminProfileModifyAdminInfo.aspx.designer.cs">
+      <DependentUpon>AdminProfileModifyAdminInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoginForm.aspx.cs">
+      <DependentUpon>LoginForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\LoginForm.aspx.designer.cs">
+      <DependentUpon>LoginForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerForm.aspx.cs">
+      <DependentUpon>ManagerForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerForm.aspx.designer.cs">
+      <DependentUpon>ManagerForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionAddStaffForm.aspx.cs">
+      <DependentUpon>ManagerFunctionAddStaffForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionAddStaffForm.aspx.designer.cs">
+      <DependentUpon>ManagerFunctionAddStaffForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionAddStaffUserForm.aspx.cs">
+      <DependentUpon>ManagerFunctionAddStaffUserForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionAddStaffUserForm.aspx.designer.cs">
+      <DependentUpon>ManagerFunctionAddStaffUserForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionAddStaffWorkHour.aspx.cs">
+      <DependentUpon>ManagerFunctionAddStaffWorkHour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionAddStaffWorkHour.aspx.designer.cs">
+      <DependentUpon>ManagerFunctionAddStaffWorkHour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionChangePasswordStaff.aspx.cs">
+      <DependentUpon>ManagerFunctionChangePasswordStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionChangePasswordStaff.aspx.designer.cs">
+      <DependentUpon>ManagerFunctionChangePasswordStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionModifyStaffInfo.aspx.cs">
+      <DependentUpon>ManagerFunctionModifyStaffInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionModifyStaffInfo.aspx.designer.cs">
+      <DependentUpon>ManagerFunctionModifyStaffInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionModifyStaffWorkHour.aspx.cs">
+      <DependentUpon>ManagerFunctionModifyStaffWorkHour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionModifyStaffWorkHour.aspx.designer.cs">
+      <DependentUpon>ManagerFunctionModifyStaffWorkHour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionSelectStaffWorkHour.aspx.cs">
+      <DependentUpon>ManagerFunctionSelectStaffWorkHour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionSelectStaffWorkHour.aspx.designer.cs">
+      <DependentUpon>ManagerFunctionSelectStaffWorkHour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionSelectUserStaff.aspx.cs">
+      <DependentUpon>ManagerFunctionSelectUserStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionSelectUserStaff.aspx.designer.cs">
+      <DependentUpon>ManagerFunctionSelectUserStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionUserForm.aspx.cs">
+      <DependentUpon>ManagerFunctionUserForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerFunctionUserForm.aspx.designer.cs">
+      <DependentUpon>ManagerFunctionUserForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerProfileForm.aspx.cs">
+      <DependentUpon>ManagerProfileForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerProfileForm.aspx.designer.cs">
+      <DependentUpon>ManagerProfileForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerProfileModifyManagerInfo.aspx.cs">
+      <DependentUpon>ManagerProfileModifyManagerInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager_Form\ManagerProfileModifyManagerInfo.aspx.designer.cs">
+      <DependentUpon>ManagerProfileModifyManagerInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Staff_Form\StaffForm.aspx.cs">
+      <DependentUpon>StaffForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Staff_Form\StaffForm.aspx.designer.cs">
+      <DependentUpon>StaffForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Staff_Form\StaffProfileForm.aspx.cs">
+      <DependentUpon>StaffProfileForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Staff_Form\StaffProfileForm.aspx.designer.cs">
+      <DependentUpon>StaffProfileForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Staff_Form\StaffProfileModifyStaffInfo.aspx.cs">
+      <DependentUpon>StaffProfileModifyStaffInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Staff_Form\StaffProfileModifyStaffInfo.aspx.designer.cs">
+      <DependentUpon>StaffProfileModifyStaffInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55630</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44317/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
